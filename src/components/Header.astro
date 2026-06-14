@@ -1,0 +1,36 @@
+---
+const navItems = [
+  { label: 'Accueil', href: '/' },
+  { label: 'À propos', href: '/a-propos' },
+  { label: 'Prestations', href: '/prestations' },
+  { label: 'Contact', href: '/contact' }
+];
+---
+<header class="header">
+  <div class="container header__inner">
+    <a class="site-logo" href="/">
+      <img src="/images/logo-pf-consultant.png" alt="Logo PF Consultant" />
+    </a>
+
+    <nav class="nav-list" aria-label="Navigation principale">
+      {navItems.map((item) => (
+        <a href={item.href}>{item.label}</a>
+      ))}
+    </nav>
+
+    <div class="header-actions">
+      <a class="phone-pill" href="tel:+33667919545">06 67 91 95 45</a>
+    </div>
+  </div>
+
+  <div class="container header__menu">
+    <details class="mobile-menu">
+      <summary>Menu</summary>
+      <nav>
+        {navItems.map((item) => (
+          <a href={item.href}>{item.label}</a>
+        ))}
+      </nav>
+    </details>
+  </div>
+</header>

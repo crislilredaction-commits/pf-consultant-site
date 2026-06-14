@@ -1,0 +1,43 @@
+---
+const footerLinks = [
+  { label: 'Accueil', href: '/' },
+  { label: 'À propos', href: '/a-propos' },
+  { label: 'Prestations', href: '/prestations' },
+  { label: 'Contact', href: '/contact' },
+  { label: 'Mentions légales', href: '/mentions-legales' },
+  { label: 'Politique de confidentialité', href: '/politique-confidentialite' }
+];
+---
+<footer class="footer section section--compact">
+  <div class="container footer__inner">
+    <div class="footer-column footer-brand">
+      <div class="footer-card">
+        <img src="/images/logo-pf-consultant.png" alt="Logo PF Consultant" />
+      </div>
+      <p class="footer-lead">
+        Des solutions concrètes pour réussir vos projets.
+      </p>
+    </div>
+
+    <div class="footer-column">
+      <p class="footer-heading">Navigation</p>
+      <div class="footer-links">
+        {footerLinks.map((link) => (
+          <a href={link.href}>{link.label}</a>
+        ))}
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <p class="footer-heading">Contact</p>
+      <div class="footer-contact">
+        <a href="tel:+33667919545">06 67 91 95 45</a>
+        <a href="mailto:pfconsultant10700@gmail.com">pfconsultant10700@gmail.com</a>
+        <span>13 route de Nozay, 10700 Arcis-sur-Aube</span>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    © 2025 PF Consultant — Tous droits réservés
+  </div>
+</footer>

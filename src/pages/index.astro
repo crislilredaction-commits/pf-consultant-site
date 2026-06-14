@@ -1,0 +1,156 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import StatsBlock from '../components/StatsBlock.astro';
+import ContactCta from '../components/ContactCta.astro';
+import ImagePlaceholder from '../components/ImagePlaceholder.astro';
+
+const services = [
+  {
+    title: 'Assistance à maîtrise d’ouvrage',
+    icon: 'clipboard',
+    text: 'Un accompagnement pour vous aider à piloter votre projet, clarifier les priorités et sécuriser les choix techniques et organisationnels.'
+  },
+  {
+    title: 'Suivi de chantier',
+    icon: 'building',
+    text: 'Un regard terrain pour suivre l’avancement, coordonner les étapes et anticiper les points sensibles.'
+  },
+  {
+    title: 'Assistance aux opérations de réception',
+    icon: 'checklist',
+    text: 'Une présence à vos côtés pour préparer la réception, repérer les points de vigilance et aborder cette étape avec sérénité.'
+  },
+  {
+    title: 'Gestion des réserves',
+    icon: 'alert',
+    text: 'Un suivi rigoureux des réserves jusqu’à leur levée, afin de sécuriser la clôture du chantier.'
+  },
+  {
+    title: 'Coordination des intervenants',
+    icon: 'network',
+    text: 'Une facilitation des échanges entre les différents acteurs du projet pour fluidifier les décisions et les actions.'
+  },
+  {
+    title: 'Conseil technique',
+    icon: 'helmet',
+    text: 'Une analyse concrète des situations rencontrées sur le terrain, avec des solutions adaptées à la réalité du chantier.'
+  }
+];
+
+const stats = [
+  { value: '15 ans', label: 'd’expérience' },
+  { value: '+100', label: 'projets accompagnés' },
+  { value: '95 %', label: 'de satisfaction client' },
+  { value: 'France', label: 'entière' }
+];
+---
+<BaseLayout title="PF Consultant | Conseil chantier et suivi de chantier" description="PF Consultant accompagne maîtres d’ouvrage, professionnels et particuliers pour sécuriser leurs projets de chantier et garantir une livraison sereine.">
+  <section class="hero">
+    <div class="container hero__body">
+      <div class="hero__content">
+        <div>
+          <span class="hero__eyebrow">Accompagnement chantier & BTP</span>
+          <h1 class="hero__title">PF Consultant</h1>
+          <p class="hero__sub">Des solutions concrètes pour livrer ou réceptionner votre chantier sans stress</p>
+          <p class="hero__copy">
+            PF Consultant accompagne maîtres d’ouvrage, professionnels et particuliers pour sécuriser chaque étape de leurs projets et garantir une livraison sereine de leurs chantiers.
+          </p>
+          <div class="hero__actions">
+            <Button href="/contact">Demander un devis</Button>
+            <Button href="/contact" variant="secondary">Être rappelé</Button>
+          </div>
+          <div class="hero__contact">
+            <span>📞</span>
+            <a href="tel:+33667919545">06 67 91 95 45</a>
+          </div>
+        </div>
+
+        <div class="panel-abstract">
+          <img src="/images/hero-chantier.png" alt="Réunion de chantier autour de plans" class="hero-image" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reassurance-bar">
+    <div class="container">
+      <ul class="reassurance-list">
+        <li><span class="r-number">01</span><span class="r-label">Assistance chantier</span></li>
+        <li><span class="r-number">02</span><span class="r-label">Réception</span></li>
+        <li><span class="r-number">03</span><span class="r-label">Suivi terrain</span></li>
+        <li><span class="r-number">04</span><span class="r-label">France entière</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Nos prestations</h2>
+      <p class="section-subtitle">
+        Des prestations claires, adaptées à chaque phase de votre projet chantier, pour piloter, sécuriser et livrer dans les meilleures conditions.
+      </p>
+      <div class="services-grid" style="margin-top:2rem;">
+        {services.map((service, i) => (
+          <ServiceCard title={service.title} description={service.text} icon={service.icon} index={i + 1} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="container">
+      <h2 class="section-title">Pourquoi choisir PF Consultant ?</h2>
+      <div class="why-grid" style="margin-top:2rem;">
+        <div class="feature-card">
+          <h3 class="feature-card__title">Expérience terrain</h3>
+          <p class="feature-card__text">Une connaissance concrète des réalités du chantier, acquise au fil des projets et des situations rencontrées.</p>
+        </div>
+        <div class="feature-card">
+          <h3 class="feature-card__title">Réactivité</h3>
+          <p class="feature-card__text">Un interlocuteur disponible, capable d’intervenir rapidement pour vous aider à prendre les bonnes décisions.</p>
+        </div>
+        <div class="feature-card">
+          <h3 class="feature-card__title">Indépendance</h3>
+          <p class="feature-card__text">Un regard objectif et impartial, centré sur vos intérêts et la sécurisation de votre projet.</p>
+        </div>
+        <div class="feature-card">
+          <h3 class="feature-card__title">Accompagnement sur mesure</h3>
+          <p class="feature-card__text">Chaque mission est adaptée à votre situation, à votre niveau d’avancement et aux spécificités de votre chantier.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Chiffres clés</h2>
+      <StatsBlock stats={stats} />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="intervention-block">
+        <div class="intervention-content">
+          <span class="intervention-eyebrow">France entière</span>
+          <h2 class="section-title">Une intervention possible dans toute la France</h2>
+          <p class="intervention-text">
+            Basé à Arcis-sur-Aube, PF Consultant accompagne les projets nécessitant un regard technique, indépendant et opérationnel partout en France.
+          </p>
+          <ul class="intervention-list">
+            <li><span class="intervention-bullet">→</span> Déplacements sur site</li>
+            <li><span class="intervention-bullet">→</span> Accompagnement indépendant</li>
+            <li><span class="intervention-bullet">→</span> Suivi concret et opérationnel</li>
+          </ul>
+        </div>
+        <div class="intervention-visual">
+          <img src="/images/intervention-france.png" alt="Équipe chantier autour de plans de construction" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ContactCta />
+</BaseLayout>

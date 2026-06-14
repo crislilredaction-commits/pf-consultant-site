@@ -1,0 +1,186 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
+import ServiceDetailCard from '../components/ServiceDetailCard.astro';
+
+const services = [
+  {
+    number: '01',
+    title: 'Assistance à maîtrise d\'ouvrage',
+    description: 'PF Consultant accompagne le maître d\'ouvrage dans la compréhension, l\'organisation et le suivi de son projet. L\'objectif est de clarifier les priorités, sécuriser les choix techniques et faciliter les échanges avec les différents intervenants.',
+    icon: 'clipboard',
+    benefits: [
+      'clarifier les besoins et les priorités du projet',
+      'apporter un regard extérieur et opérationnel',
+      'aider à la prise de décision',
+      'sécuriser les étapes importantes du chantier'
+    ]
+  },
+  {
+    number: '02',
+    title: 'Suivi de chantier',
+    description: 'Le suivi de chantier permet de garder une vision claire de l\'avancement des travaux, d\'identifier les points sensibles et d\'anticiper les difficultés avant qu\'elles ne bloquent le projet.',
+    icon: 'building',
+    benefits: [
+      'suivre l\'avancement réel du chantier',
+      'repérer les écarts ou points de vigilance',
+      'faciliter la coordination des étapes',
+      'garder une trace claire des éléments à surveiller'
+    ]
+  },
+  {
+    number: '03',
+    title: 'Assistance aux opérations de réception',
+    description: 'La réception est une étape importante d\'un chantier. PF Consultant accompagne le client avant et pendant cette phase afin d\'aborder la réception avec méthode, vigilance et sérénité.',
+    icon: 'checklist',
+    benefits: [
+      'préparer la réception du chantier',
+      'identifier les points à contrôler',
+      'accompagner le client lors des opérations de réception',
+      'aider à formaliser les observations utiles'
+    ]
+  },
+  {
+    number: '04',
+    title: 'Gestion des réserves',
+    description: 'Après la réception, les réserves doivent être suivies avec rigueur. PF Consultant aide à organiser leur suivi jusqu\'à leur levée, afin de sécuriser la clôture du chantier.',
+    icon: 'alert',
+    benefits: [
+      'suivre les réserves identifiées',
+      'vérifier leur traitement',
+      'relancer les intervenants si nécessaire',
+      'accompagner jusqu\'à la clôture du dossier'
+    ]
+  },
+  {
+    number: '05',
+    title: 'Coordination des intervenants',
+    description: 'Un chantier implique souvent plusieurs acteurs. PF Consultant facilite les échanges entre les parties afin d\'améliorer la circulation des informations et la fluidité des décisions.',
+    icon: 'network',
+    benefits: [
+      'faciliter les échanges entre les intervenants',
+      'limiter les incompréhensions',
+      'aider à prioriser les actions',
+      'améliorer la fluidité du chantier'
+    ]
+  },
+  {
+    number: '06',
+    title: 'Conseil technique',
+    description: 'PF Consultant apporte un regard technique et terrain sur les situations rencontrées. L\'objectif est d\'analyser les points de blocage, d\'identifier les risques et de proposer des solutions adaptées à la réalité du chantier.',
+    icon: 'helmet',
+    benefits: [
+      'analyser une situation technique',
+      'identifier les points d\'alerte',
+      'proposer des pistes de solution',
+      'accompagner la prise de décision'
+    ]
+  }
+];
+
+const pillars = [
+  { title: 'Intervention ponctuelle', description: 'Pour un appui précis sur une question ou une phase spécifique.' },
+  { title: 'Suivi régulier', description: 'Un accompagnement continu tout au long du chantier.' },
+  { title: 'Appui technique ciblé', description: 'Une expertise apportée sur les points sensibles identifiés.' }
+];
+
+const reassurancePoints = [
+  { label: 'Regard extérieur', description: 'Une vision objectif et impartiale pour éclairer les enjeux.' },
+  { label: 'Expérience terrain', description: 'Des solutions adaptées à la réalité des chantiers.' },
+  { label: 'Accompagnement concret', description: 'Un appui clair et opérationnel au quotidien.' }
+];
+---
+
+<BaseLayout 
+  title="Prestations — PF Consultant" 
+  description="Découvrez les prestations de PF Consultant : assistance à maîtrise d'ouvrage, suivi de chantier, réception, gestion des réserves, coordination et conseil technique.">
+  
+  <!-- Hero Section -->
+  <section class="hero hero--pages">
+    <div class="container hero__body">
+      <div class="hero__content hero__content--single">
+        <span class="hero__eyebrow">Nos prestations</span>
+        <h1 class="hero__title">Prestations</h1>
+        <p class="hero__sub">Un accompagnement concret pour sécuriser chaque étape de votre chantier.</p>
+        <p class="hero__copy">
+          PF Consultant intervient à vos côtés pour vous aider à piloter, suivre, réceptionner et sécuriser votre projet, avec un regard terrain, indépendant et opérationnel.
+        </p>
+        <div class="hero__accent"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section class="section section--intro">
+    <div class="container">
+      <h2 class="section-title">Une mission adaptée à votre situation</h2>
+      <p class="section-subtitle">
+        Chaque chantier possède ses propres contraintes, son rythme et ses points de vigilance. PF Consultant adapte son accompagnement à l'état d'avancement du projet, aux besoins du client et aux étapes à sécuriser.
+      </p>
+      
+      <div class="pillars-grid" style="margin-top: 2rem;">
+        {pillars.map((pillar) => (
+          <div class="pillar-card">
+            <h3 class="pillar-card__title">{pillar.title}</h3>
+            <p class="pillar-card__description">{pillar.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid Section -->
+  <section class="section section--services">
+    <div class="container">
+      <h2 class="section-title">Les 6 prestations de PF Consultant</h2>
+      
+      <div class="services-detail-grid">
+        {services.map((service, index) => (
+          <ServiceDetailCard 
+            number={service.number}
+            title={service.title}
+            description={service.description}
+            benefits={service.benefits}
+            icon={service.icon}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Reassurance Section -->
+  <section class="section section--dark section--reassurance-large">
+    <div class="container">
+      <h2 class="section-title">Un regard indépendant pour avancer avec plus de sérénité</h2>
+      <p class="section-subtitle">
+        L'objectif de PF Consultant est d'apporter un appui clair, concret et opérationnel, afin de vous aider à sécuriser vos décisions et à avancer avec une meilleure vision de votre chantier.
+      </p>
+      
+      <div class="reassurance-points-grid" style="margin-top: 2.5rem;">
+        {reassurancePoints.map((point) => (
+          <div class="reassurance-point-card">
+            <h3 class="reassurance-point-card__title">{point.label}</h3>
+            <p class="reassurance-point-card__description">{point.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="section section--cta-final">
+    <div class="container">
+      <div class="cta-final">
+        <h2 class="cta-final__title">Besoin d'un regard extérieur sur votre chantier ?</h2>
+        <p class="cta-final__text">
+          Expliquez votre situation et les points que vous souhaitez sécuriser. PF Consultant vous répondra pour envisager l'accompagnement le plus adapté.
+        </p>
+        <div class="cta-final__actions">
+          <Button href="/contact">Contacter PF Consultant</Button>
+          <Button href="tel:+33667919545" variant="secondary">Appeler le 06 67 91 95 45</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

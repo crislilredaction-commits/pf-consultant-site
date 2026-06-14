@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ImagePlaceholder from '../components/ImagePlaceholder.astro';
+---
+<BaseLayout title="À propos | PF Consultant" description="En savoir plus sur PF Consultant, son approche de l'accompagnement chantier et son expertise terrain.">
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title">À propos</h1>
+      <p class="section-subtitle">
+        PF Consultant accompagne maîtres d’ouvrage, professionnels et particuliers dans la sécurisation de leurs projets de chantier.
+      </p>
+      <div class="about-grid" style="margin-top:2rem;">
+        <div>
+          <p>Responsable : Patrick Fichel</p>
+          <p>Adresse : 13 route de Nozay, 10700 Arcis-sur-Aube</p>
+          <p>Zone d’intervention : France entière</p>
+          <p>PF Consultant se concentre sur la clarté, le terrain et l’efficacité pour apporter de la sérénité à chaque étape de vos projets.</p>
+        </div>
+        <ImagePlaceholder label="Visuel à ajouter" variant="secondary" />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

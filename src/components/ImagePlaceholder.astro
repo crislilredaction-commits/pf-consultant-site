@@ -1,0 +1,8 @@
+---
+const { label, variant = 'default' } = Astro.props;
+---
+<div class={`placeholder-card placeholder-card--${variant}`}>
+  <div class="placeholder-card__inner">
+    <span>{label}</span>
+  </div>
+</div>
