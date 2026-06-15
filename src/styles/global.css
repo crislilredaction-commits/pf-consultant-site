@@ -2031,3 +2031,405 @@ a.button {
     padding-bottom: 3rem !important;
   }
 }
+
+/* =========================================================
+   PF Consultant — Premium visual layer 2
+   Services / Why / Stats / Coverage
+   ========================================================= */
+
+/* Sections : respiration premium mais contrôlée */
+
+.section {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
+.section__header,
+.section-header {
+  margin-bottom: 2.25rem !important;
+}
+
+.section-title {
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 2px;
+  background: var(--color-orange);
+  margin-top: 0.75rem;
+}
+
+/* Prestations : grille 3 colonnes plus harmonieuse */
+
+.services-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 1.5rem !important;
+  align-items: stretch;
+}
+
+.service-card {
+  min-height: 0 !important;
+  padding: 1.65rem 1.65rem 1.8rem !important;
+  background:
+    linear-gradient(rgba(30, 30, 28, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 30, 28, 0.025) 1px, transparent 1px),
+    var(--color-surface) !important;
+  background-size:
+    48px 48px,
+    48px 48px,
+    auto !important;
+}
+
+.service-card__index {
+  top: 1.15rem !important;
+  right: 1.25rem !important;
+  font-size: 2.6rem !important;
+  color: rgba(30, 30, 28, 0.075) !important;
+}
+
+.service-card__icon {
+  margin-bottom: 1.15rem !important;
+}
+
+.service-card__title {
+  margin-bottom: 0.65rem !important;
+}
+
+.service-card__text {
+  color: var(--color-muted) !important;
+}
+
+/* Pourquoi choisir : cards plus techniques */
+
+.why-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 1.25rem !important;
+}
+
+.feature-card {
+  min-height: 0 !important;
+  padding: 1.75rem 1.75rem 1.75rem 3rem !important;
+  overflow: hidden;
+}
+
+.feature-card::after {
+  content: "";
+  position: absolute;
+  top: 1.4rem;
+  right: 1.4rem;
+  width: 34px;
+  height: 34px;
+  border-top: 1px solid rgba(232, 64, 26, 0.35);
+  border-right: 1px solid rgba(232, 64, 26, 0.35);
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.feature-card:hover {
+  border-color: rgba(232, 64, 26, 0.22) !important;
+  background: rgba(255, 255, 255, 0.055) !important;
+  transform: translateY(-3px);
+}
+
+.feature-card__icon,
+.why-card__icon {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 6px !important;
+  background: rgba(232, 64, 26, 0.1) !important;
+  color: var(--color-orange) !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
+}
+
+.feature-card__icon svg,
+.why-card__icon svg {
+  width: 25px !important;
+  height: 25px !important;
+  stroke: var(--color-orange) !important;
+}
+
+.feature-card__text,
+.feature-card p {
+  color: rgba(244, 241, 236, 0.62) !important;
+  font-size: 0.94rem !important;
+  line-height: 1.6 !important;
+}
+
+/* Chiffres clés : plus premium, moins “cartes simples” */
+
+.stats-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 0 !important;
+  background: var(--color-surface);
+  border: 1px solid rgba(30, 30, 28, 0.08);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.stat-card {
+  border-right: 1px solid rgba(30, 30, 28, 0.08) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 2rem 1.5rem !important;
+}
+
+.stat-card:last-child {
+  border-right: none !important;
+}
+
+.stat-card__number,
+.stat-card__value {
+  font-family: var(--font-display) !important;
+  font-size: clamp(2.4rem, 4vw, 3.8rem) !important;
+  line-height: 0.95 !important;
+  color: var(--color-orange) !important;
+}
+
+.stat-card__label {
+  font-size: 0.78rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-muted) !important;
+}
+
+/* France entière : plus stylisé, moins bloc blanc bizarre */
+
+.intervention-block,
+.coverage-inner {
+  position: relative;
+  display: grid !important;
+  grid-template-columns: 1fr 0.85fr !important;
+  gap: 2.5rem !important;
+  align-items: center;
+  background:
+    linear-gradient(rgba(30, 30, 28, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 30, 28, 0.035) 1px, transparent 1px),
+    var(--color-surface) !important;
+  background-size:
+    64px 64px,
+    64px 64px,
+    auto !important;
+  border: 1px solid rgba(30, 30, 28, 0.08) !important;
+  border-radius: var(--radius-card) !important;
+  box-shadow: var(--shadow-card) !important;
+  overflow: hidden;
+}
+
+.intervention-block::before,
+.coverage-inner::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(
+    180deg,
+    var(--color-orange),
+    rgba(232, 64, 26, 0.15)
+  );
+}
+
+.intervention-eyebrow,
+.coverage-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--color-orange) !important;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+
+.intervention-eyebrow::before,
+.coverage-eyebrow::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: var(--color-orange);
+}
+
+.intervention-list,
+.coverage-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 1.4rem 0 0 !important;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.intervention-list li,
+.coverage-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.intervention-list li::before,
+.coverage-list li::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  border-radius: 4px;
+  background: rgba(232, 64, 26, 0.1);
+  border: 1px solid rgba(232, 64, 26, 0.25);
+  box-shadow: inset 0 0 0 4px rgba(232, 64, 26, 0.04);
+}
+
+/* CTA final : on vérifie qu’il reste fort mais pas énorme */
+
+.contact-cta {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
+.contact-cta__inner {
+  max-width: 760px !important;
+}
+
+/* Responsive phase 2 */
+
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .stat-card:nth-child(2) {
+    border-right: none !important;
+  }
+
+  .stat-card:nth-child(1),
+  .stat-card:nth-child(2) {
+    border-bottom: 1px solid rgba(30, 30, 28, 0.08) !important;
+  }
+
+  .intervention-block,
+  .coverage-inner {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .services-grid,
+  .why-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .service-card {
+    padding: 1.4rem !important;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .stat-card {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(30, 30, 28, 0.08) !important;
+  }
+
+  .stat-card:last-child {
+    border-bottom: none !important;
+  }
+
+  .contact-cta {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
+/* =========================================================
+   PF Consultant — Why section icon correction
+   ========================================================= */
+
+.feature-card {
+  padding: 1.7rem 1.7rem 1.7rem 5.2rem !important;
+}
+
+.feature-card::before {
+  left: 1.55rem !important;
+  top: 1.7rem !important;
+  width: 42px !important;
+  height: 42px !important;
+  bottom: auto !important;
+  border-radius: 6px !important;
+  background: rgba(232, 64, 26, 0.1) !important;
+  border: 1px solid rgba(232, 64, 26, 0.22);
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
+}
+
+.feature-card:nth-child(1)::before {
+  content: "⌂";
+  color: var(--color-orange);
+  font-size: 1.35rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-card:nth-child(2)::before {
+  content: "↯";
+  color: var(--color-orange);
+  font-size: 1.45rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-card:nth-child(3)::before {
+  content: "◇";
+  color: var(--color-orange);
+  font-size: 1.45rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-card:nth-child(4)::before {
+  content: "◎";
+  color: var(--color-orange);
+  font-size: 1.35rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-card__icon,
+.why-card__icon {
+  display: none !important;
+}
+
+.feature-card__title,
+.feature-card h3 {
+  margin-top: 0 !important;
+  margin-bottom: 0.5rem !important;
+}
