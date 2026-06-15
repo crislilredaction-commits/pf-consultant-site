@@ -1,16 +1,72 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Mentions légales | PF Consultant" description="Mentions légales de PF Consultant pour l'activité de conseil et d'accompagnement chantier.">
-  <section class="section">
+
+<BaseLayout title="Mentions légales | PF Consultant" description="Mentions légales du site PF Consultant, conseil et accompagnement chantier.">
+  <section class="hero hero--legal">
+    <div class="container hero__body">
+      <div class="legal-hero">
+        <span class="hero__eyebrow">PF Consultant · Informations légales</span>
+        <h1 class="hero__title">Mentions légales</h1>
+        <p class="hero__copy">
+          Informations relatives à l’éditeur, au responsable de publication et aux conditions d’utilisation du site pf-consultant.fr.
+        </p>
+        <div class="hero__accent"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--legal">
     <div class="container">
-      <h1 class="section-title">Mentions légales</h1>
-      <p class="section-subtitle">PF Consultant - SIRET 523 983 583 00023</p>
-      <div style="margin-top:2rem; display:grid; gap:1rem;">
-        <p>Responsable : Patrick Fichel</p>
-        <p>Adresse : 13 route de Nozay, 10700 Arcis-sur-Aube</p>
-        <p>Email : pfconsultant10700@gmail.com</p>
-        <p>Zone d'intervention : France entière</p>
+      <div class="legal-layout">
+        <article class="legal-card">
+          <h2>1. Éditeur du site</h2>
+          <p><strong>PF Consultant</strong></p>
+          <p>Patrick Fichel</p>
+          <p>SIRET : 523 983 583 00023</p>
+          <p>13 route de Nozay<br />10700 Arcis-sur-Aube</p>
+          <p>Téléphone : <a href="tel:+33667919545">06 67 91 95 45</a></p>
+          <p>Email : <a href="mailto:pfconsultant10700@gmail.com">pfconsultant10700@gmail.com</a></p>
+          <p>Site : pf-consultant.fr</p>
+        </article>
+
+        <article class="legal-card">
+          <h2>2. Responsable de publication</h2>
+          <p>Le responsable de publication du site est Patrick Fichel.</p>
+        </article>
+
+        <article class="legal-card legal-card--notice">
+          <h2>3. Hébergement</h2>
+          <p>Hébergeur : information à compléter avant mise en ligne définitive.</p>
+        </article>
+
+        <article class="legal-card">
+          <h2>4. Propriété intellectuelle</h2>
+          <p>
+            Les textes, le logo, les éléments graphiques et les contenus présents sur ce site sont protégés par le droit de la propriété intellectuelle.
+          </p>
+          <p>
+            Toute reproduction, représentation, modification, diffusion ou exploitation non autorisée, totale ou partielle, est interdite.
+          </p>
+        </article>
+
+        <article class="legal-card">
+          <h2>5. Responsabilité</h2>
+          <p>
+            Les informations présentes sur le site sont fournies à titre indicatif. PF Consultant s’efforce de maintenir les informations à jour et exactes.
+          </p>
+          <p>
+            Malgré le soin apporté au contenu, des erreurs ou omissions peuvent subsister. L’utilisateur est invité à contacter PF Consultant pour toute précision.
+          </p>
+        </article>
+
+        <article class="legal-card">
+          <h2>6. Contact</h2>
+          <p>
+            Pour toute question relative au site ou aux présentes mentions légales, vous pouvez contacter PF Consultant par email à
+            <a href="mailto:pfconsultant10700@gmail.com">pfconsultant10700@gmail.com</a>.
+          </p>
+        </article>
       </div>
     </div>
   </section>
