@@ -99,6 +99,7 @@ const reassurancePoints = [
   <section class="hero hero--pages">
     <div class="container hero__body">
       <div class="hero__content hero__content--single">
+        <div class="hero__text">
         <span class="hero__eyebrow">Nos prestations</span>
         <h1 class="hero__title">Prestations</h1>
         <p class="hero__sub">Un accompagnement concret pour sécuriser chaque étape de votre chantier.</p>
@@ -106,6 +107,17 @@ const reassurancePoints = [
           PF Consultant intervient à vos côtés pour vous aider à piloter, suivre, réceptionner et sécuriser votre projet, avec un regard terrain, indépendant et opérationnel.
         </p>
         <div class="hero__accent"></div>
+        </div>
+
+        <div class="prestations-hero-panel" aria-hidden="true">
+          <div class="prestations-hero-panel__badge">LOT 01</div>
+          <div class="prestations-hero-panel__title">Analyse &middot; Suivi &middot; R&eacute;ception &middot; R&eacute;serves</div>
+          <div class="prestations-hero-panel__lines">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -118,7 +130,7 @@ const reassurancePoints = [
         Chaque chantier possède ses propres contraintes, son rythme et ses points de vigilance. PF Consultant adapte son accompagnement à l'état d'avancement du projet, aux besoins du client et aux étapes à sécuriser.
       </p>
       
-      <div class="pillars-grid" style="margin-top: 2rem;">
+      <div class="pillars-grid">
         {pillars.map((pillar) => (
           <div class="pillar-card">
             <h3 class="pillar-card__title">{pillar.title}</h3>
@@ -156,7 +168,7 @@ const reassurancePoints = [
         L'objectif de PF Consultant est d'apporter un appui clair, concret et opérationnel, afin de vous aider à sécuriser vos décisions et à avancer avec une meilleure vision de votre chantier.
       </p>
       
-      <div class="reassurance-points-grid" style="margin-top: 2.5rem;">
+      <div class="reassurance-points-grid">
         {reassurancePoints.map((point) => (
           <div class="reassurance-point-card">
             <h3 class="reassurance-point-card__title">{point.label}</h3>

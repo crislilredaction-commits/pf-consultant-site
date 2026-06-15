@@ -1,4 +1,4 @@
-﻿---
+---
 interface Props {
   number: string;
   title: string;
@@ -36,12 +36,13 @@ const selectedIcon = icons[icon] || icons.clipboard;
       <p class="service-detail-card__benefits-label">Cette prestation permet de :</p>
       <ul class="service-detail-card__list">
         {benefits.map(benefit => (
-          <li><span class="benefit-bullet">â†’</span> {benefit}</li>
+          <li><span class="benefit-bullet" aria-hidden="true"></span> {benefit}</li>
         ))}
       </ul>
     </div>
     
-    <a href="/contact" class="service-detail-card__link">Ã‰changer sur cette prestation â†’</a>
+    <a href="/contact" class="service-detail-card__link">&Eacute;changer sur cette prestation <span aria-hidden="true">&rarr;</span></a>
   </div>
 </div>
+
 
