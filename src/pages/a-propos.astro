@@ -1,22 +1,111 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ImagePlaceholder from '../components/ImagePlaceholder.astro';
+import Button from '../components/Button.astro';
+
+const strengths = [
+  {
+    title: 'Expérience terrain',
+    text: 'Une approche concrète des situations de chantier, centrée sur les contraintes réelles, les priorités et les points de vigilance.'
+  },
+  {
+    title: 'Réactivité',
+    text: 'Un appui disponible pour aider à clarifier rapidement une situation, préparer une étape ou débloquer une décision.'
+  },
+  {
+    title: 'Indépendance',
+    text: 'Un regard extérieur, objectif et opérationnel, au service de la sécurisation du projet et de vos intérêts.'
+  },
+  {
+    title: 'Accompagnement sur mesure',
+    text: 'Une mission adaptée à votre besoin : intervention ponctuelle, suivi régulier ou appui ciblé sur une phase sensible.'
+  }
+];
 ---
-<BaseLayout title="À propos | PF Consultant" description="En savoir plus sur PF Consultant, son approche de l'accompagnement chantier et son expertise terrain.">
-  <section class="section">
-    <div class="container">
-      <h1 class="section-title">À propos</h1>
-      <p class="section-subtitle">
-        PF Consultant accompagne maîtres d’ouvrage, professionnels et particuliers dans la sécurisation de leurs projets de chantier.
-      </p>
-      <div class="about-grid" style="margin-top:2rem;">
-        <div>
-          <p>Responsable : Patrick Fichel</p>
-          <p>Adresse : 13 route de Nozay, 10700 Arcis-sur-Aube</p>
-          <p>Zone d’intervention : France entière</p>
-          <p>PF Consultant se concentre sur la clarté, le terrain et l’efficacité pour apporter de la sérénité à chaque étape de vos projets.</p>
+
+<BaseLayout title="À propos | PF Consultant" description="En savoir plus sur PF Consultant, Patrick Fichel, son approche terrain et son accompagnement chantier partout en France.">
+  <section class="hero hero--about">
+    <div class="container hero__body">
+      <div class="about-hero">
+        <div class="about-hero__content">
+          <span class="hero__eyebrow">PF Consultant · Patrick Fichel</span>
+          <h1 class="hero__title">Un regard terrain pour sécuriser vos chantiers</h1>
+          <p class="hero__copy">
+            PF Consultant accompagne maîtres d’ouvrage, professionnels et particuliers pour sécuriser les étapes importantes de leurs projets.
+          </p>
+          <div class="hero__accent"></div>
         </div>
-        <ImagePlaceholder label="Visuel à ajouter" variant="secondary" />
+
+        <div class="about-hero-panel" aria-hidden="true">
+          <div class="about-hero-panel__badge">PF</div>
+          <div class="about-hero-panel__label">Expérience · Indépendance · Terrain</div>
+          <div class="about-hero-panel__mark"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--about-intro">
+    <div class="container">
+      <div class="about-intro">
+        <div>
+          <span class="about-section-label">Présentation</span>
+          <h2 class="section-title">Patrick Fichel, un accompagnement concret sur le terrain</h2>
+        </div>
+        <div class="about-intro__text">
+          <p>
+            PF Consultant accompagne les projets chantier et BTP avec une approche claire, professionnelle et orientée terrain. L’objectif est d’aider chaque client à mieux comprendre la situation, à identifier les points sensibles et à avancer avec une vision plus structurée.
+          </p>
+          <p>
+            L’accompagnement vise à clarifier les enjeux, faciliter les décisions et sécuriser les étapes importantes du chantier, de l’analyse d’une situation à la réception ou au suivi des réserves.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--about-strengths">
+    <div class="container">
+      <h2 class="section-title">Une approche solide, indépendante et adaptée</h2>
+      <div class="about-strengths-grid">
+        {strengths.map((strength) => (
+          <article class="about-strength-card">
+            <h3 class="about-strength-card__title">{strength.title}</h3>
+            <p class="about-strength-card__text">{strength.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--about-coverage">
+    <div class="container">
+      <div class="about-coverage">
+        <div>
+          <span class="about-section-label">Zone d’intervention</span>
+          <h2 class="section-title">Basé à Arcis-sur-Aube, intervention possible partout en France</h2>
+          <p>
+            PF Consultant intervient auprès des maîtres d’ouvrage, professionnels et particuliers ayant besoin d’un regard technique, indépendant et opérationnel sur leur chantier.
+          </p>
+        </div>
+        <div class="about-coverage__panel" aria-hidden="true">
+          <span>Arcis-sur-Aube</span>
+          <strong>France entière</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cta-final">
+    <div class="container">
+      <div class="cta-final">
+        <h2 class="cta-final__title">Vous souhaitez sécuriser une étape de votre chantier ?</h2>
+        <p class="cta-final__text">
+          Présentez votre situation et les points à clarifier. PF Consultant vous répondra pour envisager l’accompagnement le plus adapté.
+        </p>
+        <div class="cta-final__actions">
+          <Button href="/contact">Contacter PF Consultant</Button>
+          <Button href="tel:+33667919545" variant="secondary">Appeler le 06 67 91 95 45</Button>
+        </div>
       </div>
     </div>
   </section>
