@@ -1121,6 +1121,16 @@ ol {
   outline: 2px solid rgba(232, 64, 26, 0.24);
 }
 
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-text-fill-color: var(--color-dark);
+  caret-color: var(--color-dark);
+  border: 1px solid rgba(30, 30, 28, 0.12);
+  box-shadow: 0 0 0 1000px var(--color-surface) inset;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
 /* ============================================================
    PRESTATIONS PAGE STYLES
    ============================================================ */
@@ -3766,6 +3776,15 @@ a.button {
 .contact-form-card .field textarea:focus {
   outline: 2px solid rgba(232, 64, 26, 0.22);
   border-color: rgba(232, 64, 26, 0.42);
+}
+
+.contact-form-card .field input:-webkit-autofill,
+.contact-form-card .field textarea:-webkit-autofill,
+.contact-form-card .field select:-webkit-autofill {
+  -webkit-text-fill-color: var(--color-dark);
+  caret-color: var(--color-dark);
+  border-color: rgba(30, 30, 28, 0.12);
+  box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.78) inset;
 }
 
 .contact-form-card__honeypot {
