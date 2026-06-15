@@ -1,47 +1,158 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ImagePlaceholder from '../components/ImagePlaceholder.astro';
+import Button from '../components/Button.astro';
 ---
+
 <BaseLayout title="Contact | PF Consultant" description="Contactez PF Consultant pour une assistance de chantier, un suivi de projet ou une réception de travaux.">
-  <section class="section">
-    <div class="container">
-      <div class="contact-grid">
-        <div>
-          <h1 class="section-title">Contact</h1>
-          <p class="section-subtitle">Pour échanger sur votre projet, utilisez le formulaire ou contactez directement PF Consultant.</p>
+  <section class="hero hero--contact-page">
+    <div class="container hero__body">
+      <div class="contact-hero">
+        <div class="contact-hero__content">
+          <span class="hero__eyebrow">Contact · PF Consultant</span>
+          <h1 class="hero__title">Parlons de votre chantier</h1>
+          <p class="hero__copy">
+            Expliquez votre situation, l’étape à sécuriser ou le besoin d’accompagnement. PF Consultant vous répondra pour envisager la suite avec clarté.
+          </p>
+          <div class="hero__accent"></div>
         </div>
-        <ImagePlaceholder label="Image à ajouter" variant="secondary" />
+
+        <div class="contact-hero-panel" aria-hidden="true">
+          <div class="contact-hero-panel__badge">CONTACT</div>
+          <div class="contact-hero-panel__label">Devis · Rappel · Conseil</div>
+          <div class="contact-hero-panel__mark"></div>
+        </div>
       </div>
-      <form class="contact-cta" action="https://formspree.io/f/REMPLACER_PAR_ENDPOINT" method="POST">
-        <!-- Remplacez l'endpoint Formspree ci-dessus par votre endpoint personnel après création du formulaire. -->
-        <div class="form-grid">
-          <div class="field">
-            <label for="name">Nom</label>
-            <input id="name" name="name" type="text" required />
-          </div>
-          <div class="field">
-            <label for="phone">Téléphone</label>
-            <input id="phone" name="phone" type="tel" required />
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required />
-          </div>
-          <div class="field">
-            <label for="subject">Objet</label>
-            <input id="subject" name="subject" type="text" required />
-          </div>
-        </div>
-        <div class="field">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-        <div style="display:none;">
-          <label>Ne pas remplir</label>
-          <input type="text" name="website" tabindex="-1" autocomplete="off" />
-        </div>
-        <button class="button button--primary" type="submit">Envoyer le message</button>
-      </form>
     </div>
   </section>
+
+  <section class="section section--contact-main">
+    <div class="container">
+      <div class="contact-main-grid">
+        <form class="contact-form-card" id="contact-form">
+          <div class="contact-form-card__header">
+            <span class="contact-section-label">Formulaire</span>
+            <h2 class="contact-form-card__title">Décrire votre besoin</h2>
+          </div>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Nom</label>
+              <input id="name" name="name" type="text" required />
+            </div>
+            <div class="field">
+              <label for="phone">Téléphone</label>
+              <input id="phone" name="phone" type="tel" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+            <div class="field">
+              <label for="subject">Objet</label>
+              <input id="subject" name="subject" type="text" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <div class="contact-form-card__honeypot" aria-hidden="true">
+            <label for="website">Ne pas remplir</label>
+            <input id="website" type="text" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <button class="button button--primary contact-form-card__button" type="submit">Envoyer le message</button>
+          <p class="contact-form-card__note">
+            Votre messagerie va s’ouvrir avec un email pré-rempli. Vous pourrez le relire avant envoi.
+          </p>
+          <p class="contact-form-card__fallback">
+            Si le bouton ne fonctionne pas, écrivez directement à
+            <a href="mailto:pfconsultant10700@gmail.com">pfconsultant10700@gmail.com</a>
+          </p>
+        </form>
+
+        <aside class="contact-info-panel" aria-label="Coordonnées PF Consultant">
+          <span class="contact-section-label">Coordonnées</span>
+          <div class="contact-info-card">
+            <span class="contact-info-card__label">Téléphone</span>
+            <a href="tel:+33667919545">06 67 91 95 45</a>
+          </div>
+          <div class="contact-info-card">
+            <span class="contact-info-card__label">Email</span>
+            <a href="mailto:pfconsultant10700@gmail.com">pfconsultant10700@gmail.com</a>
+          </div>
+          <div class="contact-info-card">
+            <span class="contact-info-card__label">Adresse</span>
+            <p>13 route de Nozay<br />10700 Arcis-sur-Aube</p>
+          </div>
+          <div class="contact-info-card contact-info-card--dark">
+            <span class="contact-info-card__label">Zone d’intervention</span>
+            <p>France entière</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--contact-call">
+    <div class="container">
+      <div class="contact-call">
+        <div>
+          <span class="contact-section-label">Échange direct</span>
+          <h2 class="contact-call__title">Vous préférez échanger directement ?</h2>
+        </div>
+        <Button href="tel:+33667919545">Appeler le 06 67 91 95 45</Button>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    const contactForm = document.getElementById('contact-form');
+
+    contactForm?.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(contactForm);
+      const honeypot = String(formData.get('website') || '').trim();
+
+      if (honeypot) {
+        return;
+      }
+
+      const name = String(formData.get('name') || '').trim();
+      const phone = String(formData.get('phone') || '').trim();
+      const email = String(formData.get('email') || '').trim();
+      const subject = String(formData.get('subject') || '').trim();
+      const message = String(formData.get('message') || '').trim();
+
+      const mailSubject = `Demande depuis le site PF Consultant - ${subject}`;
+      const mailBody = `Bonjour,
+
+Vous avez reçu une demande depuis le site PF Consultant.
+
+Nom :
+${name}
+
+Téléphone :
+${phone}
+
+Email :
+${email}
+
+Objet :
+${subject}
+
+Message :
+${message}
+
+---
+Message généré depuis le site pf-consultant.fr`;
+
+      const mailtoUrl = `mailto:pfconsultant10700@gmail.com?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+
+      window.location.href = mailtoUrl;
+    });
+  </script>
 </BaseLayout>
